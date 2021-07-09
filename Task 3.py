@@ -1,18 +1,18 @@
 
 
-def season(month_number):
-    if month_number == 1 or month_number == 2 or month_number == 12:
-        return "Это зима!"
-    elif month_number == 3 or month_number == 4 or month_number == 5:
-        return "Это весна!"
-    elif month_number == 6 or month_number == 7 or month_number == 8:
-        return "Это лето!"
-    elif month_number == 9 or month_number == 10 or month_number == 11:
-        return "Это осень!"
+def fact(n):
+    mul = 1
+    for i in range(1, n + 1):
+        mul *= i
+        return mul
 
 
-n = 0
-while n < 4:
-    n += 1
-    result = season(int(input("Enter number: ")))
-    print(result)
+def sin1(x, e):
+    result = 0
+    n = 1
+    temp = x
+    while abs(temp) > e:
+        result += temp
+        temp = pow(-1, n) * pow(x, 2*n + 1) / fact(2*n + 1)
+        n += 1
+    return result
