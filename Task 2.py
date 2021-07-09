@@ -1,52 +1,80 @@
-class Car:
-    def __init__(self, mark, model, year, speed=0):
-        self.__mark = mark
-        self.__model = model
-        self.__year = year
-        self.__speed = speed
-        self.__engine = False
-
-    def turn_engine(self):
-        self.__engine = True
-
-    def up_speed(self):
-        if self.__engine:
-            self.__speed += 10
-        else:
-            print("Turn on engine")
-
-    def down_speed(self):
-        if self.__engine:
-            if self.__speed >= 10:
-                self.__speed -= 10
-            else:
-                self.__speed = 0
-        else:
-            print("Turn on engine")
-
-    def get_speed(self):
-        return f'{self.__speed} km/h, {self.get_step()} step'
-
-    def get_step(self):
-        if self.__speed == 0:
-            return 'N'
-        elif self.__speed <= 15:
-            return '1'
-        elif self.__speed <= 30:
-            return '2'
-        elif self.__speed <= 45:
-            return '3'
-        elif self.__speed <= 60:
-            return '4'
-        elif self.__speed <= 75:
-            return '5'
-        else:
-            return '6'
+import math
 
 
-car_1 = Car('Mercedes-Benz', 'E-class', '2020')
-car_1.turn_engine()
-car_1.up_speed()
-car_1.down_speed()
-print(car_1.get_step())
-print(car_1.get_speed())
+class Point:
+    def __init__(self, x=0, y=0):
+        self.x = x
+        self.y = y
+
+
+class Circle:
+
+    def __init__(self, point, r):
+        self._r = r
+        self._point = point
+
+    def area(self):
+        return math.pi * (self._r ** 2)
+
+    def perimeter(self):
+        return 2 * math.pi * self._r
+
+
+class Triangle:
+
+    def __init__(self, a, b, c):
+        def side(dot1, dot2):
+            return math.sqrt((dot1.x - dot2.x) ** 2
+                             + (dot1.y - dot2.y) ** 2)
+        self._a = a
+        self._b = b
+        self._c = c
+        self._AB = side(self._a, self._b)
+        self._BC = side(self._b, self._c)
+        self._CA = side(self._c, self._a)
+
+    def area(self):
+        polu_perimeter = self.perimeter() / 2
+        return math.sqrt(polu_perimeter
+                         * (polu_perimeter - self._AB)
+                         * (polu_perimeter - self._BC)
+                         * (polu_perimeter - self._CA))
+
+    def perimeter(self):
+        return self._AB + self._BC + self._CA
+
+
+class Square:
+
+    def __init__(self, a, b):
+        def side(dot1, dot2):
+            return math.sqrt((dot1.x - dot2.x) ** 2
+                             + (dot1.y - dot2.y) ** 2) / math.sqrt(2)
+        self._a = a
+        self._b = b
+        self._AB = side(self._a, self._b)
+
+    def perimeter(self):
+        return self._AB * 4
+
+    def area(self):
+        return self._AB ** 2
+
+
+point1 = Point(1, 1)
+point2 = Point(5, 5)
+point3 = Point(3, 6)
+circle_1 = Circle(point1, 5)
+print(circle_1.area())
+print(circle_1.perimeter())
+triangle_1 = Triangle(point1, point2, point3)
+print(triangle_1.area())
+print(triangle_1.perimeter())
+square_1 = Square(point1, point2)
+print(square_1.area())
+print(square_1.perimeter())
+figures = [circle_1, triangle_1, square_1]
+total_area = 0
+for figure in figures:
+    total_area += figure.area()
+print(total_area)

@@ -1,53 +1,112 @@
-class House:
-
-    def __init__(self, room, floors, square):
-        self.__room = room
-        self.__floors = floors
-        self.__square = square
-
-    def rooms(self, room):
-        if self.__room:
-            print(self.__room, "rooms")
+class Time:
+    def __init__(self, hours=0, minutes=0, seconds=0, string_time='', other_class_object=None):
+        if hours != 0 and minutes != 0 and seconds != 0:
+            self.hours = hours
+            self.minutes = minutes
+            self.seconds = seconds
+        elif string_time != '':
+            list_time = string_time.split(':')
+            self.hours = list_time[0]
+            self.minutes = list_time[1]
+            self.seconds = list_time[2]
         else:
-            print("You didn't enter the number of rooms")
+            self.hours = other_class_object.hours
+            self.minutes = other_class_object.minutes
+            self.seconds = other_class_object.seconds
 
-    def floor(self, floors):
-        if self.__floors:
-            print(self.__floors, "floors")
+    def __eq__(self, other):
+        return (
+                self.hours == other.hours and
+                self.minutes == other.minutes and
+                self.seconds == other.seconds
+        )
+
+    def __ne__(self, other):
+        return (
+                self.hours != other.hours or
+                self.minutes != other.minutes or
+                self.seconds != other.seconds
+        )
+
+    def __lt__(self, other):
+        if self.hours < other.hours:
+            return True
+        elif self.hours == other.hours and self.minutes < other.minutes:
+            return True
+        elif self.hours == other.hours and self.minutes == other.minutes and self.seconds < other.seconds:
+            return True
         else:
-            print("you didn't enter the number of floors")
+            return False
 
-    @property
-    def room(self):
-        return self.__room
+    def __gt__(self, other):
+        if self.hours > other.hours:
+            return True
+        elif self.hours == other.hours and self.minutes > other.minutes:
+            return True
+        elif self.hours == other.hours and self.minutes == other.minutes and self.seconds > other.seconds:
+            return True
+        else:
+            return False
 
-    @room.setter
-    def room(self, new_room):
-        self.__room = new_room
+    def __le__(self, other):
+        if self.hours < other.hours:
+            return True
+        elif self.hours == other.hours and self.minutes < other.minutes:
+            return True
+        elif self.hours == other.hours and self.minutes == other.minutes and self.seconds <= other.seconds:
+            return True
+        else:
+            return False
 
-    @property
-    def floors(self):
-        return self.__floors
+    def __ge__(self, other):
+        if self.hours > other.hours:
+            return True
+        elif self.hours == other.hours and self.minutes > other.minutes:
+            return True
+        elif self.hours == other.hours and self.minutes == other.minutes and self.seconds >= other.seconds:
+            return True
+        else:
+            return False
 
-    @floors.setter
-    def floors(self, new_floors):
-        self.__floors = new_floors
+    def __sub__(self, other):
+        return Time(
+            self.hours - other.hours,
+            self.minutes - other.minutes,
+            self.seconds - other.seconds,
+        )
 
-    @property
-    def square(self):
-        return self.__square
+    def __add__(self, other):
+        return Time(
+            self.hours + other.hours,
+            self.minutes + other.minutes,
+            self.seconds + other.seconds
+        )
 
-    @square.setter
-    def square(self, new_square):
-        self.__square = new_square
+    def __mul__(self, value):
+        return Time(
+            self.hours * value,
+            self.minutes * value,
+            self.seconds * value
+        )
 
+    def __str__(self):
+        hours = int(self.hours)
+        minutes = int(self.minutes)
+        seconds = int(self.seconds)
+        while hours > 23 or minutes > 59 or seconds > 59:
+            while hours > 23:
+                hours -= 24
+            while minutes > 59:
+                hours += 1
+                minutes = minutes - 60
+            while seconds > 59:
+                minutes += 1
+                seconds = seconds - 60
+        if hours < 10:
+            hours = f'0{hours}'
+        if minutes < 10:
+            minutes = f'0{minutes}'
+        if seconds < 10:
+            seconds = f'0{seconds}'
 
-my_house = House(5, 2, 110)
-print(my_house.floors)
-print(my_house.room)
-print(my_house.square)
-my_house.rooms(5)
-my_house.floor(2)
-
-
-
+        return f'{hours}:{minutes}:{seconds}'
