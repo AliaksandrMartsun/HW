@@ -1,4 +1,0 @@
-Hello world
-qwe
-123 2
-12 34 56

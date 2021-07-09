@@ -1,7 +1,0 @@
-Hello world
-The weather is too good today
-qwe
-asd
-123 2
-12345 78
-12 34 56
