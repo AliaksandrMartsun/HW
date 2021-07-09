@@ -1,16 +1,15 @@
 from random import randint
+N = 19
 myList = []
 my_result = list()
-a = 0
-while a < 19:
-    myList.append(randint(1, 100))
-    a += 1
+for i in range(N):
+    myList.append(int(randint(1, 100)))
 print(myList)
 print(max(myList))
-for number in myList:
-    if number % 2 == 0:
+
+for i in myList:
+    if i % 2 == 0:
         my_result.append(max(myList))
     else:
-        my_result.append(number)
-
+        my_result.append(i)
 print(my_result)
