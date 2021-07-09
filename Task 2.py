@@ -1,3 +1,12 @@
-func = lambda **kwargs: {key * 2: i for key, i in kwargs.items()}
-a = func(qwe=5, qaz=9, qwert=3)
-print(a)
+
+
+def numbers(a, b, c):
+    if a == b == c:
+        print("3")
+    elif a == b or b == c or a == c:
+        print("2")
+    else:
+        print("0")
+
+
+print(numbers(12, 15, 11))
