@@ -1,12 +1,3 @@
-
-
-def my_str(b):
-    new_str = ''
-    for elem in b:
-        if elem.isalpha() or elem == ' ':
-            new_str += elem
-    return new_str.split()
-
-
-str = 'Hello1, how are you.'
-print(my_str(str))
+with open('text_1.txt', 'a') as f:
+    for i in range(3):
+        f.writelines(input('Enter string: ') + '\n')

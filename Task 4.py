@@ -1,10 +1,8 @@
-def fibonacci(n):
-    if n == 1 or n == 2:
-        return 1
-    elif n == 3:
-        return 2
-    else:
-        return fibonacci(n - 1) + fibonacci(n - 2)
-
-
-print(fibonacci(4))
+with open('text_1.txt', 'r') as f:
+    f = f.readlines()
+    for string in f:
+        counter = 0
+        for i in string:
+            if i.isalpha():
+                counter += 1
+        print(f'{string}, {counter} букв {len(string.split(" "))} слов')

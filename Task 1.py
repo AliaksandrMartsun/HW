@@ -1,11 +1,4 @@
-
-
-def string(c):
-    a = ''
-    for i in c:
-        if i == i.lower():
-            a += i
-    return a
-
-
-print(string("Привет, как Дела. Что будешь делать?"))
+with open('text_1.txt', 'w') as f:
+    n = int(input("n = "))
+    for i in range(n):
+        f.writelines(input("Enter string: ") + '\n')
