@@ -1,13 +1,3 @@
-
-
-def polindrom(text):
-    return text == text[::-1]
-
-
-def anagram(a, b):
-    return Counter(a) == Counter(b)
-
-
-
-
-from collections import Counter
+func = lambda **kwargs: {key * 2: i for key, i in kwargs.items()}
+a = func(qwe=5, qaz=9, qwert=3)
+print(a)

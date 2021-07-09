@@ -1,18 +1,16 @@
 
 
-def fact(n):
-    mul = 1
-    for i in range(1, n + 1):
-        mul *= i
-        return mul
+def my_decor(func):
+    def wrapper(arg):
+        arg = [i for i in arg if i % 2 != 0 or i == 0]
+        return func(arg)
+    return wrapper
+
+@my_decor
+def my_list(any_list):
+    for i in any_list:
+        print(i)
 
 
-def sin1(x, e):
-    result = 0
-    n = 1
-    temp = x
-    while abs(temp) > e:
-        result += temp
-        temp = pow(-1, n) * pow(x, 2*n + 1) / fact(2*n + 1)
-        n += 1
-    return result
+lst = [2, 7, 9, 10, 45, 12, -12, 13, 0]
+my_list(lst)
