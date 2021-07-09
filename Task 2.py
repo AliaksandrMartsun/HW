@@ -1,12 +1,12 @@
 
 
-def numbers(a, b, c):
-    if a == b == c:
-        print("3")
-    elif a == b or b == c or a == c:
-        print("2")
-    else:
-        print("0")
+def my_str(b):
+    new_str = ''
+    for elem in b:
+        if elem.isalpha() or elem == ' ':
+            new_str += elem
+    return new_str.split()
 
 
-print(numbers(12, 15, 11))
+str = 'Hello1, how are you.'
+print(my_str(str))
