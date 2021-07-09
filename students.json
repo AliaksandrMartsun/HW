@@ -1,22 +1,333 @@
 [
     {
-        "Name": "Ivan",
-        "lastname": "Ivanov",
-        "group": 5
+        "id": 0,
+        "name": "Room #0",
+        "students": [
+            {
+                "id": 0,
+                "name": "Ryan Keller",
+                "room": 0
+            }
+        ]
     },
     {
-        "Name": "Alina",
-        "lastname": "Martsun",
-        "group": 4
+        "id": 1,
+        "name": "Room #1",
+        "students": [
+            {
+                "id": 1,
+                "name": "Brooke Ferrell",
+                "room": 1
+            }
+        ]
     },
     {
-        "Name": "Sasha",
-        "lastname": "Martsun",
-        "group": 3
+        "id": 2,
+        "name": "Room #2",
+        "students": [
+            {
+                "id": 4,
+                "name": "Heidi Jenkins",
+                "room": 2
+            },
+            {
+                "id": 2,
+                "name": "Travis Tran",
+                "room": 2
+            }
+        ]
     },
     {
-        "Name": "Max",
-        "lastname": "sladjfk",
-        "group": 4
+        "id": 3,
+        "name": "Room #3",
+        "students": [
+            {
+                "id": 32,
+                "name": "Samuel Wilson",
+                "room": 3
+            },
+            {
+                "id": 3,
+                "name": "Dr. Cynthia Smith MD",
+                "room": 3
+            },
+            {
+                "id": 7,
+                "name": "Michael Silva",
+                "room": 3
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Room #4",
+        "students": [
+            {
+                "id": 5,
+                "name": "Melanie Mann",
+                "room": 4
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Room #5",
+        "students": [
+            {
+                "id": 37,
+                "name": "Patricia Mccormick",
+                "room": 5
+            },
+            {
+                "id": 25,
+                "name": "Edward Drake",
+                "room": 5
+            },
+            {
+                "id": 36,
+                "name": "Angela Grimes",
+                "room": 5
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Room #6",
+        "students": [
+            {
+                "id": 39,
+                "name": "Ryan Moore",
+                "room": 6
+            },
+            {
+                "id": 26,
+                "name": "Blake Horn",
+                "room": 6
+            },
+            {
+                "id": 27,
+                "name": "Krista Garcia",
+                "room": 6
+            },
+            {
+                "id": 38,
+                "name": "Kerri Marshall",
+                "room": 6
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Room #7",
+        "students": [
+            {
+                "id": 31,
+                "name": "Margaret Green",
+                "room": 7
+            },
+            {
+                "id": 8,
+                "name": "Ryan Woodard",
+                "room": 7
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "name": "Room #8",
+        "students": [
+            {
+                "id": 11,
+                "name": "Dr. Michael Lopez DDS",
+                "room": 8
+            },
+            {
+                "id": 9,
+                "name": "Michael Miller",
+                "room": 8
+            },
+            {
+                "id": 10,
+                "name": "Cassandra Wilson",
+                "room": 8
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Room #9",
+        "students": [
+            {
+                "id": 6,
+                "name": "Bruce Anderson",
+                "room": 9
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "name": "Room #10",
+        "students": [
+            {
+                "id": 35,
+                "name": "Mark Johnson",
+                "room": 10
+            },
+            {
+                "id": 22,
+                "name": "Stacey Fox",
+                "room": 10
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "name": "Room #11",
+        "students": [
+            {
+                "id": 12,
+                "name": "Thomas Salas",
+                "room": 11
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "name": "Room #12",
+        "students": [
+            {
+                "id": 28,
+                "name": "Terry Mccullough",
+                "room": 12
+            },
+            {
+                "id": 13,
+                "name": "David Henry",
+                "room": 12
+            },
+            {
+                "id": 24,
+                "name": "Carolyn Logan",
+                "room": 12
+            }
+        ]
+    },
+    {
+        "id": 13,
+        "name": "Room #13",
+        "students": [
+            {
+                "id": 40,
+                "name": "Erika Scott",
+                "room": 13
+            },
+            {
+                "id": 14,
+                "name": "Peter Munoz",
+                "room": 13
+            }
+        ]
+    },
+    {
+        "id": 14,
+        "name": "Room #14",
+        "students": [
+            {
+                "id": 33,
+                "name": "Sabrina Sharp",
+                "room": 14
+            },
+            {
+                "id": 15,
+                "name": "Kathleen Barrett",
+                "room": 14
+            }
+        ]
+    },
+    {
+        "id": 15,
+        "name": "Room #15",
+        "students": [
+            {
+                "id": 16,
+                "name": "Lee Reyes",
+                "room": 15
+            }
+        ]
+    },
+    {
+        "id": 16,
+        "name": "Room #16",
+        "students": [
+            {
+                "id": 17,
+                "name": "John Sullivan",
+                "room": 16
+            }
+        ]
+    },
+    {
+        "id": 17,
+        "name": "Room #17",
+        "students": [
+            {
+                "id": 18,
+                "name": "Roberto Reese",
+                "room": 17
+            }
+        ]
+    },
+    {
+        "id": 18,
+        "name": "Room #18",
+        "students": [
+            {
+                "id": 29,
+                "name": "Marissa Gonzalez",
+                "room": 18
+            },
+            {
+                "id": 19,
+                "name": "Eric Marshall",
+                "room": 18
+            }
+        ]
+    },
+    {
+        "id": 19,
+        "name": "Room #19",
+        "students": [
+            {
+                "id": 34,
+                "name": "Kenneth Roberts",
+                "room": 19
+            },
+            {
+                "id": 20,
+                "name": "Shawn George",
+                "room": 19
+            },
+            {
+                "id": 30,
+                "name": "John Ortiz Jr.",
+                "room": 19
+            }
+        ]
+    },
+    {
+        "id": 20,
+        "name": "Room #20",
+        "students": [
+            {
+                "id": 23,
+                "name": "Jennifer Lopez",
+                "room": 20
+            },
+            {
+                "id": 21,
+                "name": "Craig Morse",
+                "room": 20
+            }
+        ]
     }
 ]
