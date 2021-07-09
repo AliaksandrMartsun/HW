@@ -1,10 +1,17 @@
-import json
-with open('dz.json', 'r', encoding='utf-8') as f:
-    text = json.load(f)
-    a = 0
-    tmp_i = 0
-    for i, elem in enumerate(text):
-        if a < len(elem['languages']):
-            a = len(elem['languages'])
-            tmp_i = i
-    print(text[tmp_i])
+class Alphabet:
+    def __init__(self, lang, letters):
+        self.__lang = lang
+        self.__letters = letters
+
+    def print(self):
+        print(self.__letters)
+
+    def letters_num(self):
+        return len(self.__letters)
+
+
+alphabet_rus = Alphabet('rus', ['а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з', 'и', 'й', 'к', 'л', 'м', 'н', 'о', 'п',
+                                'р', 'c', 'т', 'у', 'ф', 'х', 'ц', 'ч', 'ш', 'щ', 'ъ', 'ы', 'ь', 'э', 'ю', 'я'])
+
+alphabet_rus.print()
+print(alphabet_rus.letters_num())
